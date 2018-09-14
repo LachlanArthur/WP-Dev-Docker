@@ -30,6 +30,7 @@ services:
       WORDPRESS_TABLE_PREFIX: wp_
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DEBUG: 1
     networks:
       - front
       - back
