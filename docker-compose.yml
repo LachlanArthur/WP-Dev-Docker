@@ -40,15 +40,13 @@ services:
     image: mariadb
     restart: always
     volumes:
-      - wordpress-db-data:/var/lib/mysql
+      - ./db:/var/lib/mysql
+      - ./config/mariadb/innodb-fix.cnf:/etc/mysql/conf.d/innodb-fix.cnf
+    command: mysqld --innodb-flush-method=littlesync --innodb-use-native-aio=OFF --log_bin=ON
     environment:
       MYSQL_ROOT_PASSWORD: password
     networks:
       - back
-
-volumes:
-  wordpress-db-data:
-    driver: local
 
 networks:
   front:
