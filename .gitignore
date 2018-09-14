@@ -1,2 +1,2 @@
-nginx/sites/site.conf
-wp
+/config/nginx/sites/site.conf
+/wp
