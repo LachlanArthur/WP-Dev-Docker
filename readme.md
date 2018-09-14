@@ -11,7 +11,7 @@
 1. Clone this repo somewhere
 2. Change the domain in the `.env` file (eg. `"SITE=wp.test"`)
 3. Start the containers with `docker-compose up -d`
-5. Wait a few seconds for WordPress to be installed in `./wp` (this can be configured in `.env`)
+5. Wait a few seconds for WordPress to be installed in `./wp` (this can be configured in `.env`) If WordPress already exists here, the installation will be skipped.
 4. Add the domain to your hosts file (eg. `"127.0.0.1 wp.test"`)
 6. Check out your new site at `wp.test`
 
@@ -27,7 +27,6 @@ For example, you could have the sites `wp1.test:8001` and `wp2.test:8002`
 ## Todo
 
 - Override PHP image script to install extra stuff, like XDebug
-- Add option to skip WordPress installation
 
 ---
 
